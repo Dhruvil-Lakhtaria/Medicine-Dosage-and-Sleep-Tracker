@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../img/cardiogram.png";
+import logo from "../../img/cardiogram.png";
 import $ from "jquery";
 
 const handleClick = () => {
@@ -22,19 +22,19 @@ const Navbar = () => {
           <span className="bar"></span>
         </div>
         <ul className="nav">
-          <li className="nav-item">
+          <li className="nav-item nav-h">
             <a href="/home">Home</a>
           </li>
-          <li className="nav-item">
+          <li className="nav-item nav-a">
             <a href="/appointments">Appointments</a>
           </li>
-          <li className="nav-item">
+          <li className="nav-item nav-m">
             <a href="mymeds">MyMeds</a>
           </li>
-          <li className="nav-item">
+          <li className="nav-item nav-s">
             <a href="/snooze">Snooze</a>
           </li>
-          <li className="nav-item">
+          <li className="nav-item nav-r">
             <a href="/register">Register</a>
           </li>
         </ul>

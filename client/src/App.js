@@ -1,14 +1,9 @@
-import "./App.css";
-import TopSection from "./components/TopSection";
-import Navbar from "./components/Navbar";
-import MainSection from "./components/MainSection";
-
+import "./css/Homepage.css"
+import Home from "./components/Homepage/Home";
 function App() {
   return (
     <div className="App">
-      <Navbar />
-      <TopSection />
-      <MainSection />
+      <Home />
     </div>
   );
 }
