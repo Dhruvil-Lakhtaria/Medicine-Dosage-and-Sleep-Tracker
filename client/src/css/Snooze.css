@@ -1,0 +1,30 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,700,900);
+
+#id{
+    font-size: 8000 px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+  }
+.section {
+    margin: auto;
+    height: 30em;
+    background-image: url(../img/SnoozeBack.jpg);
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    color: rgb(18, 130, 134);
+    font-family: "Gideon Roman", cursive;
+  }
+.Form{
+        padding: 5px 20px;
+}
+    
+.Form fieldset {
+        margin: 20px 0;
+    }
+h1.Form{
+    color:black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
