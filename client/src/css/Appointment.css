@@ -1,0 +1,103 @@
+/* #ee7752, #e73c7e, #23a6d5 */
+
+/* font-family: "Cormorant Garamond", serif;
+font-family: "Bree Serif", serif;
+font-family: "Gideon Roman", cursive; */
+.app-card {
+  background: radial-gradient(#f38563, #f34f1d);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 1rem;
+  height: fit-content;
+  width: 15rem;
+  border-radius: 10px;
+}
+.app-content {
+  height: fit-content;
+  width: fit-content;
+  margin: 0rem 2rem;
+}
+.upper {
+  color: rgb(255, 255, 255);
+  border-bottom: 2px solid rgb(0, 0, 0);
+  margin: 0px;
+  font-size: 1.25rem;
+  font-family: sans-serif;
+  text-align: center;
+}
+.meetup {
+  color: black;
+  margin: 15px 0px 0px 0px;
+  font-family: "Roboto Serif", sans-serif;
+  color: rgb(255, 255, 255);
+}
+.group {
+  color: rgb(255, 255, 255);
+  margin: 0px;
+  font-family: "Roboto Serif", sans-serif;
+}
+.close {
+  display: flex;
+  justify-content: flex-end;
+}
+.icon {
+  margin: 0px 5px 0px 0px;
+  color: white;
+}
+p {
+  color: rgb(247, 247, 247);
+}
+.card-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.app-header {
+  margin: 0px;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+}
+.x-sym {
+  height: 1.25rem;
+  width: 1.25rem;
+  margin: 5px 5px 0px 0px;
+  color: azure;
+}
+.x-sym:hover {
+  color: black;
+}
+.appointment-header {
+  height: 31rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url(../img/5556.jpg);
+  background-size: cover;
+  margin: 0px 0px 3rem 0px;
+}
+.Typewriter__wrapper {
+  background-color: white;
+  padding: 0.25rem;
+  font-size: 1.75rem;
+  font-family: "Cormorant Garamond", serif;
+  color: black;
+}
+.appointment-heading {
+  margin: 25px auto;
+  padding: 0.25rem;
+  background-color: white;
+  font-size: 3.75rem;
+  font-family: "Gideon Roman", cursive;
+  color: black;
+}
+@media only screen and (max-width: 750px) {
+  .appointment-header {
+    height: 34.7rem;
+  }
+  .Typewriter__cursor{
+    display: none;
+  }
+}
