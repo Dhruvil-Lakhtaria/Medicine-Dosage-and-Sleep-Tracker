@@ -1,9 +1,10 @@
-import "./css/Homepage.css"
-import Home from "./components/Homepage/Home";
+// import Home from "./components/Homepage/Home";
+import AppointmentPage from "./components/AppointmentPage/AppointmentPage";
 function App() {
   return (
     <div className="App">
-      <Home />
+      {/* <Home /> */}
+      <AppointmentPage /> 
     </div>
   );
 }
