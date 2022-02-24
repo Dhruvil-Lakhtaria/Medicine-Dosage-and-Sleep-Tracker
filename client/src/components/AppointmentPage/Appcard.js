@@ -1,48 +1,47 @@
-import React from "react";
+import React, { useState } from "react";
 import "../../css/Appointment.css";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCircleXmark } from "@fortawesome/free-regular-svg-icons";
 import {
   faCalendarCheck,
   faLocationDot,
 } from "@fortawesome/free-solid-svg-icons";
 const Appcard = ({ id, doctorName, title, date, time, address, onDelete }) => {
-  const cardColor = [
-    { color1: "#2193bd", color2: "#135299" },
-    { color1: "#f55b96", color2: "#c70c53" },
-    { color1: "#f38563", color2: "#f34f1d" },
-  ];
-  const dynamicStyling = {
-    background: `radial-gradient(${cardColor[id % 3].color1},${
-      cardColor[id % 3].color2
-    })`,
+  const [status, changeStatus] = useState(0);
+  const statusText = ["Pending", "Completed"];
+
+  const Clicked = () => {
+    changeStatus(status === 1 ? 0 : 1);
+    console.log(status);
+  };
+  const colorOptions = ["#aa8706", "#34ca84"];
+  const styleColor = {
+    background: colorOptions[status],
   };
   return (
-    <div className="app-card" style={dynamicStyling}>
-      <div className="close">
-        <FontAwesomeIcon
-          className="x-sym"
-          icon={faCircleXmark}
-          onClick={() => onDelete(id)}
-        />
+    <div className="app-card">
+      <div className="appcard-upper">
+        <h2 className="appcard-heading">Your Appointment</h2>
       </div>
-      <div className="app-content">
-        <h2 className="upper">Your Meetups</h2>
-        <h3 className="meetup">{doctorName}</h3>
-        <h4 className="group">{title}</h4>
-        <div className="details">
-          <p className="time-date">
-            <FontAwesomeIcon icon={faCalendarCheck} className="icon" />
-            <time>
-              {date} at {time}
-            </time>
-          </p>
-          <p className="location">
-            <FontAwesomeIcon icon={faLocationDot} className="icon" />
-            {address}
-          </p>
+      <div className="appcard-middle">
+        <h3 className="doctorName">{doctorName}</h3>
+        <h4 className="title">{title}</h4>
+        <div className="adress">
+          <FontAwesomeIcon icon={faLocationDot} className="appcard-icon" />
+          <p className="appcard-text">{address}</p>
         </div>
+        <div className="day-date">
+          <FontAwesomeIcon icon={faCalendarCheck} className="appcard-icon" />
+          <p className="appcard-text">{date}</p>
+        </div>
+      </div>
+      <div className="appcard-lower">
+        <button className="pending" onClick={() => Clicked(id)} style={styleColor} >
+          {statusText[status]}
+        </button>
+        <button className="delete" onClick={() => onDelete(id)}>
+          Delete
+        </button>
       </div>
     </div>
   );

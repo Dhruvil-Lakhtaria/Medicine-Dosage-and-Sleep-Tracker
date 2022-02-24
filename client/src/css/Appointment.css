@@ -4,79 +4,85 @@
 font-family: "Bree Serif", serif;
 font-family: "Gideon Roman", cursive; */
 .app-card {
-  background: radial-gradient(#f38563, #f34f1d);
+  background: #1f487e;
   display: flex;
   flex-direction: column;
   justify-content: center;
   margin: 1rem;
   height: fit-content;
-  width: 15rem;
+  width: 16rem;
   border-radius: 10px;
 }
-.app-content {
-  height: fit-content;
-  width: fit-content;
-  margin: 0rem 2rem;
-}
-.upper {
-  color: rgb(255, 255, 255);
-  border-bottom: 2px solid rgb(0, 0, 0);
-  margin: 0px;
-  font-size: 1.25rem;
-  font-family: sans-serif;
+.appointments-header {
+  font-family: "Gideon Roman", cursive;
+  margin: 0rem auto;
   text-align: center;
-}
-.meetup {
-  color: black;
-  margin: 15px 0px 0px 0px;
-  font-family: "Roboto Serif", sans-serif;
-  color: rgb(255, 255, 255);
-}
-.group {
-  color: rgb(255, 255, 255);
-  margin: 0px;
-  font-family: "Roboto Serif", sans-serif;
-}
-.close {
-  display: flex;
-  justify-content: flex-end;
-}
-.icon {
-  margin: 0px 5px 0px 0px;
-  color: white;
-}
-p {
-  color: rgb(247, 247, 247);
 }
 .card-wrapper {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
 }
-
-.app-header {
-  margin: 0px;
+.appcard-upper {
+  background-color: black;
+  padding: 0.5rem 0rem;
+}
+.appcard-heading {
+  margin: 5px 0px;
   text-align: center;
-  font-family: "Poppins", sans-serif;
+  color: white;
+  font-family: "Bree Serif", serif;
+  letter-spacing: 0.15rem;
+  font-size: 1.5rem;
 }
 .x-sym {
   height: 1.25rem;
   width: 1.25rem;
-  margin: 5px 5px 0px 0px;
   color: azure;
+  position: relative;
+  top: 5px;
+  left: 230px;
 }
 .x-sym:hover {
-  color: black;
+  color: crimson;
+}
+.doctorName,
+.title {
+  font-size: 1.25rem;
+  margin: 1rem 0px 0px 1rem;
+  color: azure;
+  font-family: "Cormorant Garamond", serif;
+}
+
+.adress {
+  margin-top: 1rem;
+  margin-bottom: 0.25rem;
+  display: flex;
+  align-items: center;
+}
+.day-date {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1em;
+}
+.appcard-text {
+  color: azure;
+  font-family: "Cormorant Garamond", serif;
+  margin: 0px;
+  overflow: visible;
+}
+.appcard-icon {
+  color: azure;
+  margin: 0rem 0.5rem 0px 1rem;
 }
 .appointment-header {
-  height: 31rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   background-image: url(../img/5556.jpg);
   background-size: cover;
-  margin: 0px 0px 3rem 0px;
+  margin: 0px;
 }
 .Typewriter__wrapper {
   background-color: white;
@@ -84,6 +90,12 @@ p {
   font-size: 1.75rem;
   font-family: "Cormorant Garamond", serif;
   color: black;
+}
+.appointmentpage-mainsection {
+  padding: 2rem 0rem;
+  margin: auto;
+  background-color: rgba(22, 207, 253,0.5);
+  height: fit-content;
 }
 .appointment-heading {
   margin: 25px auto;
@@ -93,11 +105,48 @@ p {
   font-family: "Gideon Roman", cursive;
   color: black;
 }
+.no-appointments {
+  font-family: "Cormorant Garamond", serif;
+  text-align: center;
+  margin: 5rem auto;
+}
+.pending,
+.delete {
+  width: 100%;
+  height: 2.5rem;
+  border-top: none;
+  border-bottom: 2px solid black;
+  color: azure;
+  font-size: 1.25rem;
+  font-family: "Gideon Roman", cursive;
+}
+.appcard-lower {
+  display: flex;
+}
+.pending {
+  border-radius: 0px 0px 0px 10px;
+  background-color: #aa8706;
+  border-right: 1px solid black;
+}
+.delete {
+  border-radius: 0px 0px 10px 0px;
+  background-color: #9b1832;
+  border-left: 1px solid black;
+}
 @media only screen and (max-width: 750px) {
   .appointment-header {
     height: 34.7rem;
   }
-  .Typewriter__cursor{
+  .Typewriter__cursor {
     display: none;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .appointment-heading {
+    font-size: 2.75rem;
+  }
+  .Typewriter__wrapper {
+    font-size: 1rem;
   }
 }
