@@ -8,14 +8,14 @@ font-family: "Gideon Roman", cursive; */
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: 1rem;
+  margin: 1.5rem 1.25rem;
   height: fit-content;
   width: 16rem;
   border-radius: 10px;
 }
 .appointments-header {
   font-family: "Gideon Roman", cursive;
-  margin: 0rem auto;
+  margin: 0px 0px 1rem 0px;
   text-align: center;
 }
 .card-wrapper {
@@ -148,5 +148,94 @@ font-family: "Gideon Roman", cursive; */
   }
   .Typewriter__wrapper {
     font-size: 1rem;
+  }
+}
+
+.addForm{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.add-btn{
+  margin: 0.5rem 0px 0px 0px;
+  font-family: "Bree Serif", serif;
+  font-size: 1.25rem;
+  height: 2.5rem;
+  width: 5rem;
+  background-color: chartreuse;
+  border-radius: 10px;
+  border-bottom: 2px solid black;
+}
+.close-btn{
+  margin: 0.5rem 0px 0px 0px;
+  font-family: "Bree Serif", serif;
+  font-size: 1.25rem;
+  height: 2.5rem;
+  width: 5rem;
+  background-color: #d11d41;
+  border-radius: 10px;
+  border-bottom: 2px solid black;
+}
+
+.appointment-form{
+  margin: 0.5rem;
+  padding: 1rem 2rem;
+  height: fit-content;
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: aliceblue;
+  border: 3px solid rgba(0, 0, 0,0.7);
+  border-radius: 10px;
+}
+.form-header{
+  margin: 0rem 0rem;
+  padding: 0rem;
+  display: inline-block;
+  text-align: center;
+  font-family: "Gideon Roman", cursive;
+  color: black;
+  width: 100%;
+  border-radius: 10px 10px 0px 0px;
+}
+.doctorname-input,.title-input, .address-input,.date-input,.time-input{
+  padding: 2px;
+  margin: 10px;
+  height: 2rem;
+  border: 0.5px solid black;
+  border-radius: 5px; 
+}
+.address-input{
+  height: 4rem;
+  resize: none;
+}
+input:focus,textarea:focus{
+  outline: none;
+  border:2px solid #1f487e;
+}
+.date-time-header{
+  margin: 0.5rem 0px 0rem 0rem;
+  text-align: center;
+  font-family: "Gideon Roman", cursive;
+}
+.date-time-wrapper{
+  margin-bottom: .5rem;
+}
+
+.submit-btn{
+  margin: 1rem;
+  height: 2.5rem;
+  width: 50%;
+  border-radius: 7.5px;
+  background-color:#0d6efd;
+  color: rgb(255, 255, 255);
+  font-size: 1.25rem;
+  font-family: "Bree Serif", serif;;
+}
+@media only screen and (max-width: 325px){
+  .time-date-input{
+    display: flex;
+    flex-direction: column;
   }
 }

@@ -12,7 +12,6 @@ const Appcard = ({ id, doctorName, title, date, time, address, onDelete }) => {
 
   const Clicked = () => {
     changeStatus(status === 1 ? 0 : 1);
-    console.log(status);
   };
   const colorOptions = ["#aa8706", "#34ca84"];
   const styleColor = {
@@ -32,7 +31,7 @@ const Appcard = ({ id, doctorName, title, date, time, address, onDelete }) => {
         </div>
         <div className="day-date">
           <FontAwesomeIcon icon={faCalendarCheck} className="appcard-icon" />
-          <p className="appcard-text">{date}</p>
+          <p className="appcard-text">{date} @ {time}</p>
         </div>
       </div>
       <div className="appcard-lower">
