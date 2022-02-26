@@ -47,7 +47,7 @@ const Addform = ({ onAdd }) => {
           </div>
           <input
             type="text"
-            placeholder="Doctor's Name"
+            placeholder="Appointment with"
             className="doctorname-input"
             value={dName}
             onChange={(e) => setDname(e.target.value)}

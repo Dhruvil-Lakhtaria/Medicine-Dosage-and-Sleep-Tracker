@@ -2,9 +2,8 @@ import React from "react";
 import { useState } from "react";
 import Appointments from "./Appointments";
 import AppointmentHeader from "./AppointmentHeader";
-import Navbar from "../Homepage/Navbar";
 import Addform from "./Addform";
-import "../../css/Homepage.css";
+
 const AppointmentPage = () => {
   const [id, incrementid] = useState(0);
 
@@ -23,7 +22,6 @@ const AppointmentPage = () => {
   };
   return (
     <div className="AppointmentPage">
-      <Navbar />
       <AppointmentHeader />
       <div className="appointmentpage-mainsection">
         <h1 className="appointments-header">APPOINTMENTS</h1>
