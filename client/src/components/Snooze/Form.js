@@ -22,7 +22,7 @@ const formReducer = (state, event) => {
   
     const handleChange = event => {
     const isCheckbox = event.target.type === 'checkbox';
-    if(isCheckbox==true){
+    if(isCheckbox===true){
       setFormData({
         name: event.target.name,
         value: isCheckbox ? "Yes" : "No",
