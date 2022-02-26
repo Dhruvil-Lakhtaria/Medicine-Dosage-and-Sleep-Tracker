@@ -2,9 +2,11 @@
 import "./css/Homepage.css"
 import "./css/Snooze.css"
 import "./css/Appointment.css"
-import AppointmentPage from "./components/AppointmentPage/AppointmentPage";
-import Home from "./components/Homepage/Home";
-import Snooze from "./components/Snooze/Snooze";
+import "./css/LoginPage.css"
+// import AppointmentPage from "./components/AppointmentPage/AppointmentPage";
+// import Home from "./components/Homepage/Home";
+import LoginForm from "./components/RegisterPage/LoginForm";
+// import Snooze from "./components/Snooze/Snooze";
 import Navbar from "./components/Homepage/Navbar";
 
 function App() {
@@ -12,7 +14,7 @@ function App() {
     
     <div className="App">
       <Navbar />
-      <AppointmentPage />
+      <LoginForm />
     </div>
 
   );
