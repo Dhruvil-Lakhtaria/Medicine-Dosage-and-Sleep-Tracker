@@ -1,33 +1,41 @@
-import React, { useState } from "react";
+import React from "react";
 
 const LoginForm = () => {
-  const [formType, changeType] = useState(false);
-  const handleClick = () => {
-    console.log("hello");
-  };
   return (
     <div className="login-wrapper">
-      <div className="login-container">
-        <div class="login">
-          <h1>Welcome</h1>
-          <form class="login-form">
-            <input type="email" id="email" name="email" placeholder="Email" />
+      <div className="main">
+        <input type="checkbox" id="chk"/>
+        <div className="signup">
+          <form>
+            <label htmlFor="chk" >
+              Sign up
+            </label>
+            <input type="text" name="txt" placeholder="User name" required="" />
+            <input type="email" name="email" placeholder="Email" required="" />
             <input
               type="password"
-              id="password"
-              name="password"
+              name="pswd"
               placeholder="Password"
+              required=""
             />
-            <button class="button" href="#">
-              Login
-            </button>
+            <button>Sign up</button>
           </form>
-          <div className="formLinks">
-            <a href="/">Forgot password?</a>
-            <a href="/" onClick={handleClick}>
-              New User?
-            </a>
-          </div>
+        </div>
+
+        <div className="login">
+          <form>
+            <label htmlFor="chk">
+              Login
+            </label>
+            <input type="email" name="email" placeholder="Email" required="" />
+            <input
+              type="password"
+              name="pswd"
+              placeholder="Password"
+              required=""
+            />
+            <button>Login</button>
+          </form>
         </div>
       </div>
     </div>
