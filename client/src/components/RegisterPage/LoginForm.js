@@ -18,7 +18,7 @@ const LoginForm = () => {
               placeholder="Password"
               required=""
             />
-            <button>Sign up</button>
+            <button className="signup-btn">Sign up</button>
           </form>
         </div>
 
@@ -34,7 +34,7 @@ const LoginForm = () => {
               placeholder="Password"
               required=""
             />
-            <button>Login</button>
+            <button className="login-btn">Login</button>
           </form>
         </div>
       </div>
