@@ -4,15 +4,26 @@ const LoginForm = () => {
   return (
     <div className="login-wrapper">
       <div className="main">
-        <input type="checkbox" id="chk"/>
+        <input type="checkbox" id="chk" />
         <div className="signup">
           <form>
-            <label htmlFor="chk" >
-              Sign up
-            </label>
-            <input type="text" name="txt" placeholder="User name" required="" />
-            <input type="email" name="email" placeholder="Email" required="" />
+            <label htmlFor="chk">Sign up</label>
             <input
+              type="text"
+              className="login-input"
+              name="txt"
+              placeholder="User name"
+              required=""
+            />
+            <input
+              type="email"
+              className="login-input"
+              name="email"
+              placeholder="Email"
+              required=""
+            />
+            <input
+              className="login-input"
               type="password"
               name="pswd"
               placeholder="Password"
@@ -24,13 +35,18 @@ const LoginForm = () => {
 
         <div className="login">
           <form>
-            <label htmlFor="chk">
-              Login
-            </label>
-            <input type="email" name="email" placeholder="Email" required="" />
+            <label htmlFor="chk">Login</label>
+            <input
+              type="email"
+              className="login-input"
+              name="email"
+              placeholder="Email"
+              required=""
+            />
             <input
               type="password"
               name="pswd"
+              className="login-input"
               placeholder="Password"
               required=""
             />
