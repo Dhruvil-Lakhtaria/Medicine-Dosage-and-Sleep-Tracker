@@ -36,3 +36,42 @@ h1.Form{
     color:black;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+.totd{
+  display: flex;
+    justify-content: center;
+    background-color: #0d0f0f;
+    font-size: 4px;
+}
+#button{
+  margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    --c: goldenrod;
+    color: var(--c);
+    font-size: 16px;
+    border: 0.3em solid var(--c);
+    border-radius: 0.5em;
+    width: 10 px;
+    height: 10 px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: sans-serif;
+    letter-spacing: 0.1em;
+    text-align: center;
+    line-height: 3em;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transition: 0.5s;
+    margin: 1em;
+}
+#button:hover {
+  color: rgb(238, 225, 225);
+  content: "Completed!" !important;
+  
+}
+#button:hover span {
+  transform: translateY(0) scale(1);
+}
