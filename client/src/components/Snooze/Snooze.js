@@ -1,7 +1,7 @@
 import React from 'react'
 import TopSection from './TopSection';
 import Form from './Form.js'
-import Footer from './Footer.js'
+import SnoozeFooter from './SnoozeFooter.js'
 
 
 const Snooze = () => {
@@ -10,7 +10,7 @@ const Snooze = () => {
         
         <TopSection/>
         <Form />
-        <Footer />
+        <SnoozeFooter/>
     </div>
   )
 }

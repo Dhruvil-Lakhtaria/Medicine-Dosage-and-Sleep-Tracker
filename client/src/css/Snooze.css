@@ -48,10 +48,9 @@ h1.Form{
     align-items: center;
     justify-content: center;
     background-color: black;
-    --c: goldenrod;
-    color: var(--c);
+    color: #2172ac;
     font-size: 16px;
-    border: 0.3em solid var(--c);
+    border: 0.3em solid #2172ac;
     border-radius: 0.5em;
     width: 10 px;
     height: 10 px;
