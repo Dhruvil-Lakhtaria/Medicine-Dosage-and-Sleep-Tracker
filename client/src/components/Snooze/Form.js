@@ -38,7 +38,7 @@ const formReducer = (state, event) => {
   
     return(
         <div className="Form">
-        <h1 className='Form'>Please fill in today's sleep time</h1>
+        <h1 className='Formm'>Please fill in today's sleep time</h1>
         {submitting &&
          <div>
            You are submitting the following:

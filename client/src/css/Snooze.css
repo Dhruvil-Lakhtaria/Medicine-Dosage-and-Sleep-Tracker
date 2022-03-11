@@ -27,13 +27,18 @@
   }
 .Form{
         padding: 5px 20px;
+        text-align: center;
+        width:200px;
+        display: block;
+        align-items: center;
 }
     
 .Form fieldset {
         margin: 20px 0;
     }
-h1.Form{
+h1.Formm{
     color:black;
+    width:fit-content;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 .totd{
