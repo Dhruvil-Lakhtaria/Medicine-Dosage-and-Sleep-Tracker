@@ -15,10 +15,10 @@ const Footer = () => {
       <div className="social-section">
         <p>Get connected with us on social network</p>
         <div className="icons">
-          <FontAwesomeIcon icon={faTwitter} className="tw icon" />
-          <FontAwesomeIcon icon={faInstagram} className="ig icon" />
-          <FontAwesomeIcon icon={faGithub} className="gh icon" />
-          <FontAwesomeIcon icon={faFacebook} className="fb icon" />
+          <a href="https://twitter.com/home" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faTwitter} className="tw icon" /></a>
+          <a href="https://www.instagram.com/rohit_taparia19/" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faInstagram} className="ig icon" /></a>
+          <a href="https://github.com/Dhruvil-Lakhtaria/Medicine-Dosage-and-Sleep-Tracker" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faGithub} className="gh icon" /></a>
+          <a href="https://www.facebook.com/" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faFacebook} className="fb icon" /></a>
         </div>
       </div>
       <div className="main-section">
@@ -32,10 +32,10 @@ const Footer = () => {
         <div className="footer-links">
           <h3>QUICK LINKS</h3>
           <ul className="link-list">
-            <li>Top</li>
-            <li>Appointments</li>
-            <li>MyMeds</li>
-            <li>Snooze</li>
+            <li><a href="/">Top</a></li>
+            <li><a href="/appointments">Appointments</a></li>
+            <li><a href="/mymeds">MyMeds</a></li>
+            <li><a href="/snooze">Snooze</a></li>
           </ul>
         </div>
         <div className="contact-info">
