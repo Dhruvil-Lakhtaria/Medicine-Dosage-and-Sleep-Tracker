@@ -114,8 +114,9 @@ h1.Formm{
   font-size: 18px;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 2px;
-  margin-bottom: 2px;
+  margin-top: 10px;
+  margin-bottom: 15px;
+
 }
 #buttonSleep:focus {
   box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
@@ -142,6 +143,7 @@ h1.Formm{
   z-index: 0;
   border-radius: 10px;
   align-items: center;
+  margin:5px;
 }
 @keyframes example {
   from {background-color: white;}
@@ -150,15 +152,29 @@ h1.Formm{
 
 /* The element to apply the animation to */
 .Sleep_Text {
-  
-  animation-name: example;
-  animation-duration: 4s;
+  margin:4px;
+  margin-bottom: 5px;
+  width:50%;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  ;
+     -moz-border-radius: 6px;
+     -webkit-border-radius: 6px;
+     background-color: #f0f7fb;
+     background-position: 9px 0px;
+     background-repeat: no-repeat;
+     border: solid 1px #3498db;
+     border-radius: 6px;
+     line-height: 18px;
+     overflow: hidden;
+     padding: 15px 60px;
 }
 .Sleep_Text{
   align-items: center;
   text-align: center;
-  color:black;
-    font-size: 2.25rem;
+  color:rgb(78, 78, 134);
+    font-size: 1.5rem;
     font-family: "Gideon Roman", cursive;
 }
 #buttonSleep.glow-on-hover:before {
