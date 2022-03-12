@@ -5,6 +5,7 @@ const MyMedCards = ({ Medicines }) => {
     <div className="Medicine-Cards">
       {Medicines.map((Medicine) => (
         <MedCard
+        key={Medicine.key}
           Name={Medicine.medicineName}
           Qty={Medicine.Quantity}
           Morning={Medicine.Morning}
