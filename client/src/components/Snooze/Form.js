@@ -5,7 +5,7 @@ const formReducer = (state, event) => {
       ...state,
       [event.name]: event.value
     }
-   }
+  }
    
    function Form() {
     const [formData, setFormData] = useReducer(formReducer, {});
