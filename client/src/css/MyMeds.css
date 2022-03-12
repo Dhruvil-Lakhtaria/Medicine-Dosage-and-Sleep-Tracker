@@ -1,0 +1,126 @@
+.MyMedsHeader{
+    background-image: url(../img/17973908.jpg);
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 32rem;
+}
+.medicine-input{
+  padding: 2px;
+  margin: 10px;
+  height: 2rem;
+  border: 0.5px solid black;
+  border-radius: 5px; 
+}
+.MyMedsHeader h1 {
+  margin: 0px;
+}
+.addMedicine{
+  display: flex;
+  justify-content: center;
+}
+.medicine-form{
+  margin: 0.5rem;
+  padding: 1rem 2rem;
+  height: fit-content;
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: aliceblue;
+  border: 3px solid rgba(0, 0, 0,0.7);
+  border-radius: 10px;
+  font-family: "Bree Serif", serif;
+}
+.qty-label{
+  margin: 1rem 0px;
+  color: black;
+  font-size: 1.5rem;
+}
+.qty-input{
+  margin: 0px 1rem;
+  text-align: center;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+.increment-btn,.decrement-btn{
+  padding: auto;
+  line-height: 10px;
+  font-size: 1.25rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  color: white;
+  background-color:#0d6efd;
+  border-radius: 5px;
+  display: inline-flex;
+  align-items: center; 
+}
+.med-quantity
+{
+  display: flex;
+  align-items: center;
+}
+.chk-box{
+  margin: 0px;
+  color: black;
+}
+.quantity-section{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto auto 1rem 1.75rem;
+}
+.MuiFormGroup-root{
+  align-items: flex-start;
+  margin: auto auto auto 1.75rem;
+  font-family: "Bree Serif", serif;
+}
+.submit-medicine-btn{
+  margin: 1rem;
+  height: 2.5rem;
+  width: 50%;
+  border-radius: 7.5px;
+  background-color:#0d6efd;
+  color: rgb(255, 255, 255);
+  font-size: 1.25rem;
+  font-family: "Bree Serif", serif;
+}
+.Med{
+  margin:auto;
+  width: 75%;
+  background-color: #0d6efd;
+  border-bottom: 2px solid white;
+  border-radius: 5px;
+  padding: 0.75rem;
+  font-family: "Gideon Roman", cursive;
+}
+.topMed{
+  display: flex;
+  margin: 0rem 0rem 1rem 0rem;
+}
+.topMed h2{
+  margin: 0px;
+}
+.Dosage{
+  display: flex;
+}
+.Dosage h4{
+  margin: 0px;
+}
+.dose-time{
+  display: flex;
+  padding: 0rem 1rem;
+  align-items: center;
+}
+.dose-time p{
+  margin: 0px;
+  padding: 0px 0.2rem;
+}
+@media only screen and (max-width: 750px) {
+  .meds-page {
+      position: relative;
+    top: 75px;
+  }
+}

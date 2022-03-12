@@ -2,7 +2,7 @@ import "./css/Homepage.css";
 import "./css/Snooze.css";
 import "./css/Appointment.css";
 import "./css/LoginPage.css";
-import "./css/MyMedsPage.css"
+import "./css/MyMeds.css"
 import Home from "./components/Homepage/Home";
 import AppointmentPage from "./components/AppointmentPage/AppointmentPage";
 import MyMedsPage from './components/MyMedsPage/MyMeds'
