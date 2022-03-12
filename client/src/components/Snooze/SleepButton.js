@@ -11,22 +11,23 @@ const SleepButton = () => {
         setIsSleeping(!isSleeping)
         const date = new Date();
         if (!isSleeping) {
-            alert(`Sleeping @ ${date}`)
+            alert(`Sleeping time recorded @ \n ${date}`)
             addSleepingTime([...sleepingTimes, date]);
         }
         else {
-            alert(`Woke @ ${date}`)
+            alert(`Waking time recorded @ \n${date}`)
             addWakeTime([...wakingTimes, date]);
-            addSleepTime([...SleepTime, wakingTimes[idx] - sleepingTimes[idx]])
+            const curr_date=date;
+            const pre_date=sleepingTimes[sleepingTimes.length-1];
+            addSleepTime([...SleepTime, curr_date-pre_date]);
             incrementIdx(idx + 1);
         }
-
     }
     return (
         <div className='Sleep_Button'>
             <div className="Sleep_Text">
                 <datetime />
-                Please click this button when you start or stop sleeping.
+               Click this button to add data regarding your sleep time.
             </div>
             <center>
                 <Button id="buttonSleep" variant="outlined" onClick={handleClick}>
