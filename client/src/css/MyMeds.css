@@ -6,6 +6,9 @@
     align-items: center;
     justify-content: center;
     height: 32rem;
+    font-family: "Cormorant Garamond", serif;
+    text-align: center;
+    font-size: 1.5rem;
 }
 .medicine-input{
   padding: 2px;
@@ -90,7 +93,7 @@
 .Med{
   margin:auto;
   width: 75%;
-  background-color: #0d6efd;
+  background-color: rgba(13, 110, 253,0.85);
   border-bottom: 2px solid white;
   border-radius: 5px;
   padding: 0.75rem;
@@ -118,9 +121,24 @@
   margin: 0px;
   padding: 0px 0.2rem;
 }
+.Medicine-Cards{
+  margin: 1rem auto;
+}
 @media only screen and (max-width: 750px) {
   .meds-page {
       position: relative;
     top: 75px;
+  }
+}
+
+@media only screen and (max-width: 625px) {
+  .Dosage{
+    flex-direction: column;
+  }
+  .Dosage h4{
+    margin: 0.5rem 0px;
+  }
+  .dose-time{
+    padding: 0rem;
   }
 }

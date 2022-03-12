@@ -3,8 +3,8 @@ import React from "react";
 const MyMedsHeader = () => {
   return (
     <div className="MyMedsHeader">
-      <h1>Track Your Daily Doses</h1>
-      <p>Forgetting to take your daily medicines.Tension not we are here</p>
+      <h1>Track Your Daily Medicine Doses</h1>
+      <p>Forgetting to take your daily medicines.Relax We are here.Find all your doses and prescription at one place</p>
     </div>
   );
 };
