@@ -52,7 +52,7 @@ h1.Formm{
 #button{
   margin: 0;
     display: flex;
-    align-items: center;
+    align-items: right;
     justify-content: center;
     background-color: black;
     color: #2172ac;
