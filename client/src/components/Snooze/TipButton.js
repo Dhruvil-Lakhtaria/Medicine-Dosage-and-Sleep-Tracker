@@ -16,7 +16,7 @@ import Button from "@material-ui/core/Button";
 //     setOpen(false);
 //   };
 // };
-const Footer = () => {
+const TipButton = () => {
   const [open, setOpen] = useState(false);
   const [tipNumber, changeNumber] = useState(0);
   const handleClickOpen = () => {
@@ -37,7 +37,7 @@ const Footer = () => {
 
   return (
     <div className="footer-wrapper">
-      <div className="totd">
+
         <Button
           id="button"
           variant="outlined"
@@ -61,9 +61,9 @@ const Footer = () => {
             </Button> */}
           </DialogActions>
         </Dialog>
-      </div>
+    
     </div>
   );
 };
 
-export default Footer;
+export default TipButton;
