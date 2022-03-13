@@ -11,11 +11,11 @@ const SleepButton = () => {
         setIsSleeping(!isSleeping)
         const date = new Date();
         if (!isSleeping) {
-            alert(`Sleeping time recorded @ \n ${date}`)
+            // alert(`Sleeping time recorded @ \n ${date}`)
             addSleepingTime([...sleepingTimes, date]);
         }
         else {
-            alert(`Waking time recorded @ \n${date}`)
+        //     alert(`Waking time recorded @ \n${date}`)
             addWakeTime([...wakingTimes, date]);
             const curr_date=date;
             const pre_date=sleepingTimes[sleepingTimes.length-1];
