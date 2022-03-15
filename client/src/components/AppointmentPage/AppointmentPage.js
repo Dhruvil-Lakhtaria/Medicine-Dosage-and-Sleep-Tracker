@@ -3,7 +3,7 @@ import { useState } from "react";
 import Appointments from "./Appointments";
 import AppointmentHeader from "./AppointmentHeader";
 import Addform from "./Addform";
-
+import Copyrights from "../Homepage/Copyrights";
 const AppointmentPage = () => {
   const [id, incrementid] = useState(0);
 
@@ -35,6 +35,7 @@ const AppointmentPage = () => {
           <h1 className="no-appointments">No Appointments Pending</h1>
         )}
       </div>
+      <Copyrights />
     </div>
   );
 };

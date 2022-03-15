@@ -26,7 +26,7 @@ const SleepButton = () => {
     return (
         <div className='Sleep_Button'>
             <div className="Sleep_Text">
-                <datetime />
+                
                Click this button to add data regarding your sleep time.
             </div>
             <center>

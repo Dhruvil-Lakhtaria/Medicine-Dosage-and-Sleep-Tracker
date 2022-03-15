@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import MyMedsHeader from "./MyMedsHeader";
 import MedsForm from "./MedsForm";
 import MyMedCards from "./MyMedCards";
+import Copyrights from "../Homepage/Copyrights";
 const MyMeds = () => {
   const [key, incrementKey] = useState(3);
   const [Medicines, addMedicine] = useState([
@@ -40,6 +41,7 @@ const MyMeds = () => {
       <MyMedsHeader />
       <MedsForm addDetails={addMedicneCard}/>
       <MyMedCards Medicines={Medicines} />
+      <Copyrights />
     </div>
   );
 };

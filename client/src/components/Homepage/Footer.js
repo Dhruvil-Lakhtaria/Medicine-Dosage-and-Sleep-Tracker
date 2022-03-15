@@ -7,8 +7,7 @@ import {
   faFacebook,
   faTwitter,
 } from "@fortawesome/free-brands-svg-icons";
-import { faEnvelope, faHome, faPhone,faHeart } from "@fortawesome/free-solid-svg-icons";
-import {faCopyright} from "@fortawesome/free-regular-svg-icons"
+import { faEnvelope, faHome, faPhone} from "@fortawesome/free-solid-svg-icons";
 const Footer = () => {
   return (
     <div className="footer-wrapper">
@@ -56,10 +55,7 @@ const Footer = () => {
           </ul>
         </div>
       </div>
-      <div className="bottom-section">
-        <p><FontAwesomeIcon icon={faCopyright}/>2022 copyright: medisafe.com</p>
-        <p >Made with <FontAwesomeIcon className="heart" icon={faHeart}/> by MediSafe</p>
-      </div>
+      
     </div>
   );
 };

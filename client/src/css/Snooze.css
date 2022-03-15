@@ -67,9 +67,6 @@ h1.Formm {
   letter-spacing: 0.1em;
   text-align: center;
   line-height: 3em;
-  position: relative;
-  overflow: hidden;
-  z-index: 1;
   transition: 0.5s;
   margin: 1em;
 }
