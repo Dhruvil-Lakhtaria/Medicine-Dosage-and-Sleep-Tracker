@@ -118,3 +118,8 @@ h1.Formm {
   font-size: 1.5rem;
   font-family: "Gideon Roman", cursive;
 }
+
+.line-chart{
+    display: flex;
+    justify-content: center;
+}
