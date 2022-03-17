@@ -21,7 +21,7 @@ const Snooze = () => {
           addWakeTime([...wakingTimes, date]);
           const pre_date=sleepingTimes[sleepingTimes.length-1];
           var newSleepData = {
-            value:date-pre_date,
+            time:(date-pre_date)/1000,
             dataKey:date.getDate().toString() + "/" + date.getMonth().toString() + "/" + date.getFullYear().toString(),
           }
           addSleepTime([...SleepTime,newSleepData]);
