@@ -12,7 +12,7 @@ const Navbar = () => {
       <div className="grad-bar"></div>
       <div className="navbar">
         <div className="header">
-          <img alt="logo" src={logo} className="nav-logo"></img>
+          <a href="/" className="main-icon"><img alt="logo" src={logo} className="nav-logo"></img></a>
           <h1>MediSafe</h1>
         </div>
         <div className="menu-toggle" id="mobile-menu" onClick={handleClick}>
