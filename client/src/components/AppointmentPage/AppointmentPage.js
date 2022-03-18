@@ -14,11 +14,11 @@ const AppointmentPage = () => {
     );
   };
   const addAppointment = (appointment) => {
-    var newAppointment = {id, ...appointment };
-    newAppointment = {key:id,...newAppointment};
-    incrementid(id+1);
+    var newAppointment = { id, ...appointment };
+    newAppointment = { key: id, ...newAppointment };
+    incrementid(id + 1);
     console.log(newAppointment);
-    setAppointments([...appointments,newAppointment]);
+    setAppointments([...appointments, newAppointment]);
   };
   return (
     <div className="AppointmentPage">

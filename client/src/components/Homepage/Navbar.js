@@ -7,7 +7,6 @@ const handleClick = () => {
   $(".menu-toggle").toggleClass("is-active");
 };
 const Navbar = () => {
-  
   return (
     <div className="navbar-wrapper">
       <div className="grad-bar"></div>

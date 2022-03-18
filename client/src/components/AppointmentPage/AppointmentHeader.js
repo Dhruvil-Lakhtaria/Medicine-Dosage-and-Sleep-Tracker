@@ -6,7 +6,7 @@ const AppointmentHeader = () => {
     "Following your schedule.",
     "The perfect smile is an appointment away.",
   ];
-  const headerHeight = {height: window.innerHeight};
+  const headerHeight = { height: window.innerHeight };
   return (
     <div className="appointment-header" style={headerHeight}>
       <h1 className="appointment-heading">RENDEZVOUS</h1>

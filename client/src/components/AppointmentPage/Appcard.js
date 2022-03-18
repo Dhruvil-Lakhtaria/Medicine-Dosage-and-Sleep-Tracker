@@ -31,11 +31,17 @@ const Appcard = ({ id, doctorName, title, date, time, address, onDelete }) => {
         </div>
         <div className="day-date">
           <FontAwesomeIcon icon={faCalendarCheck} className="appcard-icon" />
-          <p className="appcard-text">{date} @ {time}</p>
+          <p className="appcard-text">
+            {date} @ {time}
+          </p>
         </div>
       </div>
       <div className="appcard-lower">
-        <button className="pending" onClick={() => Clicked(id)} style={styleColor} >
+        <button
+          className="pending"
+          onClick={() => Clicked(id)}
+          style={styleColor}
+        >
           {statusText[status]}
         </button>
         <button className="delete" onClick={() => onDelete(id)}>

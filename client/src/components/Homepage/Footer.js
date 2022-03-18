@@ -7,17 +7,33 @@ import {
   faFacebook,
   faTwitter,
 } from "@fortawesome/free-brands-svg-icons";
-import { faEnvelope, faHome, faPhone} from "@fortawesome/free-solid-svg-icons";
+import { faEnvelope, faHome, faPhone } from "@fortawesome/free-solid-svg-icons";
 const Footer = () => {
   return (
     <div className="footer-wrapper">
       <div className="social-section">
         <p>Get connected with us on social network</p>
         <div className="icons">
-          <a href="https://twitter.com/home" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faTwitter} className="tw icon" /></a>
-          <a href="https://www.instagram.com/rohit_taparia19/" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faInstagram} className="ig icon" /></a>
-          <a href="https://github.com/Dhruvil-Lakhtaria/Medicine-Dosage-and-Sleep-Tracker" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faGithub} className="gh icon" /></a>
-          <a href="https://www.facebook.com/" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faFacebook} className="fb icon" /></a>
+          <a href="https://twitter.com/home" target="_blank" rel="noreferrer">
+            <FontAwesomeIcon icon={faTwitter} className="tw icon" />
+          </a>
+          <a
+            href="https://www.instagram.com/rohit_taparia19/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <FontAwesomeIcon icon={faInstagram} className="ig icon" />
+          </a>
+          <a
+            href="https://github.com/Dhruvil-Lakhtaria/Medicine-Dosage-and-Sleep-Tracker"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <FontAwesomeIcon icon={faGithub} className="gh icon" />
+          </a>
+          <a href="https://www.facebook.com/" target="_blank" rel="noreferrer">
+            <FontAwesomeIcon icon={faFacebook} className="fb icon" />
+          </a>
         </div>
       </div>
       <div className="main-section">
@@ -31,10 +47,18 @@ const Footer = () => {
         <div className="footer-links">
           <h3>QUICK LINKS</h3>
           <ul className="link-list">
-            <li><a href="/">Top</a></li>
-            <li><a href="/appointments">Appointments</a></li>
-            <li><a href="/mymeds">MyMeds</a></li>
-            <li><a href="/snooze">Snooze</a></li>
+            <li>
+              <a href="/">Top</a>
+            </li>
+            <li>
+              <a href="/appointments">Appointments</a>
+            </li>
+            <li>
+              <a href="/mymeds">MyMeds</a>
+            </li>
+            <li>
+              <a href="/snooze">Snooze</a>
+            </li>
           </ul>
         </div>
         <div className="contact-info">
@@ -55,7 +79,6 @@ const Footer = () => {
           </ul>
         </div>
       </div>
-      
     </div>
   );
 };

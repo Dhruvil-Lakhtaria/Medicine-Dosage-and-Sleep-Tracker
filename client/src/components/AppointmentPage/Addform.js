@@ -17,7 +17,7 @@ const Addform = ({ onAdd }) => {
       date: date,
       time: time,
       address: address,
-    }
+    };
     onAdd(appointment);
     setDname("");
     setAddress("");

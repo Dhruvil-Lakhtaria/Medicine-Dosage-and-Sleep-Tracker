@@ -20,7 +20,7 @@ const TipButton = () => {
   const [open, setOpen] = useState(false);
   const [tipNumber, changeNumber] = useState(0);
   const handleClickOpen = () => {
-    var newTip = Math.floor((Math.random()*10000))%tips.length
+    var newTip = Math.floor(Math.random() * 10000) % tips.length;
     changeNumber(newTip);
     setOpen(true);
   };
@@ -49,31 +49,23 @@ const TipButton = () => {
 
   return (
     <div className="footer-wrapper">
-
-        <Button
-          id="button"
-          variant="outlined"
-          onClick={handleClickOpen}
-        >
-          TIP OF THE DAY
-        </Button>
-        <Dialog open={open} onClose={handleClose}>
-          <DialogTitle>Tip of the day</DialogTitle>
-          <DialogContent>
-            <DialogContentText>
-              {tips[tipNumber]}
-            </DialogContentText>
-          </DialogContent>
-          <DialogActions>
-            <Button onClick={handleClose} color="primary">
-              Close
-            </Button>
-            {/* <Button onClick={handleClose} color="primary" autoFocus>
+      <Button id="button" variant="outlined" onClick={handleClickOpen}>
+        TIP OF THE DAY
+      </Button>
+      <Dialog open={open} onClose={handleClose}>
+        <DialogTitle>Tip of the day</DialogTitle>
+        <DialogContent>
+          <DialogContentText>{tips[tipNumber]}</DialogContentText>
+        </DialogContent>
+        <DialogActions>
+          <Button onClick={handleClose} color="primary">
+            Close
+          </Button>
+          {/* <Button onClick={handleClose} color="primary" autoFocus>
               Yes
             </Button> */}
-          </DialogActions>
-        </Dialog>
-    
+        </DialogActions>
+      </Dialog>
     </div>
   );
 };

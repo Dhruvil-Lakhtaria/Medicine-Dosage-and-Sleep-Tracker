@@ -101,7 +101,11 @@
 }
 .topMed{
   display: flex;
+  justify-content: space-between;
   margin: 0rem 0rem 1rem 0rem;
+}
+.delete-icon:hover{
+  color: crimson;
 }
 .topMed h2{
   margin: 0px;

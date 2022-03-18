@@ -2,7 +2,6 @@ import { Checkbox, FormControlLabel, FormGroup } from "@material-ui/core";
 import React, { useState } from "react";
 
 const MedsForm = ({ addDetails }) => {
-
   const [quantity, incrementMedicine] = useState(0);
   const [MedName, setMedName] = useState("");
   const [Morning, toggleMorning] = useState(false);
@@ -22,8 +21,8 @@ const MedsForm = ({ addDetails }) => {
       Morning: Morning,
       Afternoon: Afternoon,
       Night: Night,
-    }
-    addDetails(Medicine)
+    };
+    addDetails(Medicine);
     setMedName("");
     incrementMedicine(0);
     toggleNight(false);
@@ -58,7 +57,12 @@ const MedsForm = ({ addDetails }) => {
             >
               -
             </button>
-            <input type="text" value={quantity} className="qty-input" readOnly/>
+            <input
+              type="text"
+              value={quantity}
+              className="qty-input"
+              readOnly
+            />
             <button
               type="button"
               className="increment-btn"
@@ -71,21 +75,30 @@ const MedsForm = ({ addDetails }) => {
         <FormGroup>
           <FormControlLabel
             control={
-              <Checkbox onClick={(e) => toggleMorning(e.target.checked)} checked={Morning}/>
+              <Checkbox
+                onClick={(e) => toggleMorning(e.target.checked)}
+                checked={Morning}
+              />
             }
             label="Morning"
             className="chk-box"
           />
           <FormControlLabel
             control={
-              <Checkbox onClick={(e) => toggleAfternoon(e.target.checked)} checked={Afternoon}/>
+              <Checkbox
+                onClick={(e) => toggleAfternoon(e.target.checked)}
+                checked={Afternoon}
+              />
             }
             label="Afternoon"
             className="chk-box"
           />
           <FormControlLabel
             control={
-              <Checkbox onClick={(e) => toggleNight(e.target.checked)} checked={Night}/>
+              <Checkbox
+                onClick={(e) => toggleNight(e.target.checked)}
+                checked={Night}
+              />
             }
             label="Night"
             className="chk-box"

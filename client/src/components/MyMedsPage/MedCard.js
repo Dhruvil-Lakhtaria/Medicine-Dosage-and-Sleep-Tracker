@@ -1,12 +1,15 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faMoon,faSun,faCloudSun} from "@fortawesome/free-solid-svg-icons";
-// import {fasu} from "@fortawesome/free-brands-svg-icons";
-const MedCard = ({ Name, Qty, Morning, Afternoon, Night }) => {
+import { faMoon, faSun, faCloudSun, faSquareXmark } from "@fortawesome/free-solid-svg-icons";
+
+const MedCard = ({ Name, Qty, Morning, Afternoon, Night,deleteMed }) => {
   return (
     <div className="Med">
       <div className="topMed">
-        <h2>{Name} - x{Qty}</h2>
+        <h2>
+          {Name} - x{Qty}
+        </h2>
+        <FontAwesomeIcon className="delete-icon" icon={faSquareXmark} onClick={() => deleteMed(Name)}/>
       </div>
       <div className="Dosage">
         <h4>Dosage : </h4>
@@ -20,7 +23,7 @@ const MedCard = ({ Name, Qty, Morning, Afternoon, Night }) => {
         )}
         {Afternoon ? (
           <div className="dose-time morning">
-            <FontAwesomeIcon icon={faCloudSun} color="white"/>
+            <FontAwesomeIcon icon={faCloudSun} color="white" />
             <p>Afternoon</p>
           </div>
         ) : (
