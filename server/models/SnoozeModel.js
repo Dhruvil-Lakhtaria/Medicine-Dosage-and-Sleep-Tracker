@@ -1,7 +1,7 @@
 const mongoose=require('mongoose');
 
 const Snooze=new mongoose.Schema({
-    _id: Number,
+    _id:  mongoose.Schema.ObjectId,
     sleeptime: [{
         type: String
     }]
