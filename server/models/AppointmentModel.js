@@ -5,7 +5,8 @@ const Appointment=new mongoose.Schema({
     appointment_with: String,
     appointment_title: String,
     appointment_address: String,
-    appointment_date: String
+    appointment_date: String,
+    pending: Boolean
 })
 
 module.exports=mongoose.model('Appointment',Appointment)
