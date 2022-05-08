@@ -1,8 +1,8 @@
 const mongoose=require('mongoose');
 
 const Snooze=new mongoose.Schema({
-    _Id: Number,
-    SleepTime: [{
+    _id: Number,
+    sleeptime: [{
         type: String
     }]
 })

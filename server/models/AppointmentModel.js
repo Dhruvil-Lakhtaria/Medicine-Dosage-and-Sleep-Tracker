@@ -2,10 +2,10 @@ const mongoose=require('mongoose');
 
 const Appointment=new mongoose.Schema({
     _id: Number,
-    Appointment_With: String,
-    Appointment_Title: String,
-    Appointment_Address: String,
-    Appointment_Date: String
+    appointment_with: String,
+    appointment_title: String,
+    appointment_address: String,
+    appointment_date: String
 })
 
 module.exports=mongoose.model('Appointment',Appointment)
