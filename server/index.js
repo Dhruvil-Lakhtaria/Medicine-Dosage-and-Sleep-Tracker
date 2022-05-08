@@ -1,5 +1,6 @@
 const connectDB = require("./config/db");
 const express = require("express");
+const cors = require("cors");
 const mongoose = require("mongoose");
 const UserRouter = require("./routes/UserRoute");
 const AppointmentRouter = require("./routes/AppointmentRoute");
@@ -12,6 +13,7 @@ connectDB();
 
 app.use(express.urlencoded({extended: true}));
 app.use(express.json());
+app.use(cors());
 app.use("/auth",UserRouter);
 app.use("/appointment",AppointmentRouter);
 app.use("/mymeds",MyMedsRouter);

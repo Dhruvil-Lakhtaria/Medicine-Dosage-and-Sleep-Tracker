@@ -4,22 +4,22 @@ const Addform = ({ onAdd }) => {
   const changeStatus = () => {
     changeState(!formState);
   };
-  const [dName, setDname] = useState("");
-  const [title, setTitle] = useState("");
-  const [address, setAddress] = useState("");
-  const [date, setDate] = useState("");
-  const [time, setTime] = useState("");
+  const [appointment_with, setAppointment_with] = useState("");
+  const [appointment_title, setTitle] = useState("");
+  const [appointment_address, setAddress] = useState("");
+  const [appointment_date, setDate] = useState("");
+  const [appointment_time,setTime] = useState("");
+
   const addAppointment = (e) => {
     e.preventDefault();
     const appointment = {
-      doctorName: dName,
-      title: title,
-      date: date,
-      time: time,
-      address: address,
+      appointment_with: appointment_with,
+      appointment_title: appointment_title,
+      appoitment_date: appointment_date,
+      appointment_address: appointment_address,
     };
     onAdd(appointment);
-    setDname("");
+    setAppointment_with("");
     setAddress("");
     setDate("");
     setTitle("");
@@ -49,22 +49,22 @@ const Addform = ({ onAdd }) => {
             type="text"
             placeholder="Appointment with"
             className="doctorname-input"
-            value={dName}
-            onChange={(e) => setDname(e.target.value)}
+            value={appointment_with}
+            onChange={(e) => setAppointment_with(e.target.value)}
             required
           />
           <input
             type="text"
             placeholder="Title/Reason"
             className="title-input"
-            value={title}
+            value={appointment_title}
             onChange={(e) => setTitle(e.target.value)}
             required
           />
           <textarea
             placeholder="Address"
             className="address-input"
-            value={address}
+            value={appointment_address}
             onChange={(e) => setAddress(e.target.value)}
             required
           ></textarea>
@@ -74,14 +74,14 @@ const Addform = ({ onAdd }) => {
               <input
                 type="date"
                 className="date-input"
-                value={date}
+                value={appointment_date}
                 onChange={(e) => setDate(e.target.value)}
                 required
               ></input>
               <input
                 type="time"
                 className="time-input"
-                value={time}
+                value={appointment_time}
                 onChange={(e) => setTime(e.target.value)}
                 required
               />

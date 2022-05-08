@@ -1,25 +1,31 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useState } from "react";
 import Appointments from "./Appointments";
 import AppointmentHeader from "./AppointmentHeader";
 import Addform from "./Addform";
 import Copyrights from "../Homepage/Copyrights";
+import axios from "axios";
 const AppointmentPage = () => {
-  const [id, incrementid] = useState(0);
-
   const [appointments, setAppointments] = useState([]);
+
   const deleteAppointment = (id) => {
     setAppointments(
       appointments.filter((appointment) => appointment.id !== id)
     );
+    console.log("Appointment Deleted");
   };
   const addAppointment = (appointment) => {
-    var newAppointment = { id, ...appointment };
-    newAppointment = { key: id, ...newAppointment };
-    incrementid(id + 1);
-    console.log(newAppointment);
-    setAppointments([...appointments, newAppointment]);
+    axios.post("http://localhost:8000/appointment?userid=62779691a3873b6c38ebe929",appointment)
+    setAppointments([...appointments, appointment]);
+    console.log("Appointment Added");
   };
+  useEffect( () => {
+    axios.get("http://localhost:8000/appointment?userid=62779691a3873b6c38ebe929")
+    .then( res => {
+      console.log(res.data);
+      setAppointments(res.data);
+    });
+  },[]);
   return (
     <div className="AppointmentPage">
       <AppointmentHeader />

@@ -5,13 +5,11 @@ const Appointments = ({ appointments, onDelete }) => {
     <div className="card-wrapper">
       {appointments.map((app) => (
         <Appcard
-          key={app.id}
-          id={app.id}
-          doctorName={app.doctorName}
-          title={app.title}
-          date={app.date}
-          time={app.time}
-          address={app.address}
+          key={app._id}
+          appointment_with={app.appointment_with}
+          appointment_title={app.appointment_title}
+          appointment_date={app.appointment_date}
+          appointment_address={app.appointment_address}
           onDelete={onDelete}
         />
       ))}
