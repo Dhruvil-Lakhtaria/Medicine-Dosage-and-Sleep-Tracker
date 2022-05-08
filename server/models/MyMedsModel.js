@@ -1,10 +1,10 @@
 const mongoose=require('mongoose');
 
 const MyMeds=new mongoose.Schema({
-    _id: Number,
+    _id: mongoose.Schema.ObjectId,
     medicine_name: String,
     quantity: Number,
-    time: String,
+    timings: [{type:Boolean}],
 })
 
 module.exports=mongoose.model('MyMeds',MyMeds)
