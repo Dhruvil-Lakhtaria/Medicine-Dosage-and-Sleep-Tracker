@@ -12,6 +12,7 @@ router.post("/", async (req, res) => {
     const appointment_date = req.query.appointment_date;
     const appointment_title = req.query.appointment_title;
     const appointment_address = req.query.appointment_address;
+    const pending=req.query.pending;
     const _id = new mongoose.Types.ObjectId();
     const appointments = await Appointment.create({
       _id,
@@ -19,6 +20,7 @@ router.post("/", async (req, res) => {
       appointment_date,
       appointment_title,
       appointment_address,
+      pending
     });
     await appointments.save();
     user.appointment.push(appointments._id);
