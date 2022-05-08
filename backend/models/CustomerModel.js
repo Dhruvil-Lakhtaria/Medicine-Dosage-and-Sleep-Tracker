@@ -6,11 +6,11 @@ const Customer=new mongoose.Schema({
     Email: String,
     Password: String,
     Appointment:[
-        {type: Schema.Types.ObjectId, ref: 'Appointment'}
+        {type: mongoose.Schema.Types.ObjectId, ref: 'Appointment'}
       ],  
-    Snooze:{type: Schema.Types.ObjectId, ref: 'Snooze'},
+    Snooze:{type: mongoose.Schema.Types.ObjectId, ref: 'Snooze'},
     MyMeds:[
-        {type: Schema.Types.ObjectId, ref: 'MyMeds'}
+        {type: mongoose.Schema.Types.ObjectId, ref: 'MyMeds'}
       ]
 })
 
