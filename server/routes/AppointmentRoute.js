@@ -1,13 +1,13 @@
 const Appointment = require("../models/AppointmentModel");
-const User =  require("../models/UserModel");
+const User = require("../models/UserModel");
 const mongoose = require("mongoose");
 const express = require("express");
 const router = express.Router();
 
 router.post("/", async (req, res) => {
   try {
-    let userid = req.query.userid;
-    const user = await User.findById({_id:userid});
+    const userid = req.query.userid;
+    const user = await User.findById({ _id: userid });
     const appointment_with = req.query.appointment_with;
     const appointment_date = req.query.appointment_date;
     const appointment_title = req.query.appointment_title;
@@ -29,4 +29,20 @@ router.post("/", async (req, res) => {
   }
 });
 
+router.get("/", async (req, res) => {
+  try {
+    const userid = req.query.userid;
+    const user = await User.findById({_id:userid});
+    const appointments = user.appointment;
+    const data = [];
+    for(appointment of appointments)
+    {
+        const appointment_data = await Appointment.findById({_id:appointment});
+        data.push(appointment_data);
+    } 
+    res.status(200).send(data);
+  } catch (err) {
+    res.status(404).json({ error: `${err}` });
+  }
+});
 module.exports = router;
