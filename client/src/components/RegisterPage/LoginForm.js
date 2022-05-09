@@ -1,33 +1,33 @@
 import React, { useState } from "react";
 
-const LoginForm = () => {
-  const [signupDetails, addDetails] = useState([]);
-  const [userName, updateUserName] = useState("");
+const LoginForm = ({ onRegister, onLogin }) => {
+  // const [signupDetails, addDetails] = useState([]);
+  const [name, updateUserName] = useState("");
   const [email, updateEmail] = useState("");
   const [password, updatePassword] = useState("");
-  const [loggedEmail, updateLoggedEmail] = useState("");
+  const [loggedName, updateLoggedName] = useState("");
   const [loggedPassword, updateLoggedPassword] = useState("");
-  const handleClick = (e) => {
+  const handleRegister = (e) => {
     e.preventDefault();
     const newDetails = {
-      userName: userName,
+      name: name,
       email: email,
       password: password,
     };
-    addDetails([...signupDetails, newDetails]);
+    onRegister(newDetails);
     updateUserName("");
     updateEmail("");
     updatePassword("");
   };
   const handleLogin = (e) => {
     e.preventDefault();
-    signupDetails.forEach((signUp) => {
-      if (loggedEmail === signUp.email && loggedPassword === signUp.password) {
-        alert("Registered User");
-      }
-      updateLoggedEmail("");
-      updateLoggedPassword("");
-    });
+    const loginDetail = {
+      name: loggedName,
+      password: loggedPassword,
+    };
+    onLogin(loginDetail);
+    updateLoggedName("");
+    updateLoggedPassword("");
   };
   return (
     <div className="login-wrapper">
@@ -37,7 +37,7 @@ const LoginForm = () => {
           <form>
             <label htmlFor="chk">Sign up</label>
             <input
-              value={userName}
+              value={name}
               onChange={(e) => updateUserName(e.target.value)}
               type="text"
               className="login-input"
@@ -63,7 +63,7 @@ const LoginForm = () => {
               placeholder="Password"
               required=""
             />
-            <button className="signup-btn" onClick={handleClick}>
+            <button className="signup-btn" onClick={handleRegister}>
               Sign up
             </button>
           </form>
@@ -73,12 +73,12 @@ const LoginForm = () => {
           <form>
             <label htmlFor="chk">Login</label>
             <input
-              value={loggedEmail}
-              onChange={(e) => updateLoggedEmail(e.target.value)}
-              type="email"
+              value={loggedName}
+              onChange={(e) => updateLoggedName(e.target.value)}
+              type="text"
               className="login-input"
               name="email"
-              placeholder="Email"
+              placeholder="Name"
             />
             <input
               value={loggedPassword}

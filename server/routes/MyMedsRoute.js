@@ -9,7 +9,10 @@ router.post("/", async (req, res) => {
         const user = await User.findById({_id:userid});
         const medicine_name = req.query.medicine_name;
         const quantity= req.query.quantity;
-        const timings = Array(req.query.timings);
+        const m = req.query.morning;
+        const a = req.query.afternoon;
+        const n = req.query.night;
+        const timings = [m,a,n];
         const _id = new mongoose.Types.ObjectId();
         const mymeds  = await MyMeds.create({
           _id,
@@ -20,6 +23,7 @@ router.post("/", async (req, res) => {
         await mymeds.save();
         user.mymeds.push(mymeds._id);
         await user.save();
+        console.log(mymeds);
         return res.status(201).json(mymeds);
       } catch (err) {
         res.status(404).json({ error: `${err}` });

@@ -16,12 +16,13 @@ const MedsForm = ({ addDetails }) => {
   const addMedDetail = (e) => {
     e.preventDefault();
     const Medicine = {
-      medicineName: MedName,
-      Quantity: quantity,
-      Morning: Morning,
-      Afternoon: Afternoon,
-      Night: Night,
+      medicine_name: MedName,
+      quantity: quantity,
+      morning: Morning,
+      afternoon: Afternoon,
+      night: Night,
     };
+    console.log(Medicine);
     addDetails(Medicine);
     setMedName("");
     incrementMedicine(0);

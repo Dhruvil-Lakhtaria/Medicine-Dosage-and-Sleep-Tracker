@@ -8,16 +8,17 @@ const Addform = ({ onAdd }) => {
   const [appointment_title, setTitle] = useState("");
   const [appointment_address, setAddress] = useState("");
   const [appointment_date, setDate] = useState("");
-  const [appointment_time,setTime] = useState("");
+  const [appointment_time, setTime] = useState("");
 
   const addAppointment = (e) => {
     e.preventDefault();
     const appointment = {
       appointment_with: appointment_with,
       appointment_title: appointment_title,
-      appoitment_date: appointment_date,
+      appointment_date: appointment_date + "@" + appointment_time,
       appointment_address: appointment_address,
     };
+    console.log(appointment);
     onAdd(appointment);
     setAppointment_with("");
     setAddress("");

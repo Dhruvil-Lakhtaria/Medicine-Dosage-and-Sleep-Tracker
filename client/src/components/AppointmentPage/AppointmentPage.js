@@ -8,24 +8,40 @@ import axios from "axios";
 const AppointmentPage = () => {
   const [appointments, setAppointments] = useState([]);
 
-  const deleteAppointment = (id) => {
+  const deleteAppointment = (key) => {
+    console.log(key);
     setAppointments(
-      appointments.filter((appointment) => appointment.id !== id)
+      appointments.filter((appointment) => appointment._id !== key)
     );
-    console.log("Appointment Deleted");
   };
   const addAppointment = (appointment) => {
-    axios.post("http://localhost:8000/appointment?userid=62779691a3873b6c38ebe929",appointment)
-    setAppointments([...appointments, appointment]);
-    console.log("Appointment Added");
+    let queryString = "http://localhost:8000/appointment";
+    queryString = queryString
+      .concat("?userid=")
+      .concat("62789de529ed129021782259")
+      .concat("&appointment_with=")
+      .concat(appointment.appointment_with)
+      .concat("&appointment_title=")
+      .concat(appointment.appointment_title)
+      .concat("&appointment_address=")
+      .concat(appointment.appointment_address)
+      .concat("&appointment_date=")
+      .concat(appointment.appointment_date)
+      .concat("@")
+      .concat(appointment.appointment_time);
+    axios.post(queryString).then( (res) => {
+      setAppointments([...appointments, appointment]);
+    } );
   };
   useEffect( () => {
-    axios.get("http://localhost:8000/appointment?userid=62779691a3873b6c38ebe929")
-    .then( res => {
+    let queryString = "http://localhost:8000/appointment?";
+    queryString = queryString.concat("userid=").concat("62789de529ed129021782259");
+    axios.get(queryString).then((res) => {
       console.log(res.data);
       setAppointments(res.data);
     });
-  },[]);
+  },[])
+  
   return (
     <div className="AppointmentPage">
       <AppointmentHeader />

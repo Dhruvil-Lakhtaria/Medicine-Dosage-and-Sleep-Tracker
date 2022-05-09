@@ -8,11 +8,12 @@ router.post("/", async (req, res) => {
   try {
     const userid = req.query.userid;
     const user = await User.findById({ _id: userid });
+    console.log(userid);
     const appointment_with = req.query.appointment_with;
     const appointment_date = req.query.appointment_date;
     const appointment_title = req.query.appointment_title;
     const appointment_address = req.query.appointment_address;
-    const pending=req.query.pending;
+    const pending=false;
     const _id = new mongoose.Types.ObjectId();
     const appointments = await Appointment.create({
       _id,
